@@ -14,8 +14,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		124D91C42B38157B0011319E /* fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fragment.glsl; sourceTree = "<group>"; };
+		124D91C52B38157B0011319E /* vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertex.glsl; sourceTree = "<group>"; };
 		126378962B36B7EB0044D838 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../../opt/homebrew/Cellar/glfw/3.3.9/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		128C09DB2B36C15E00A7045E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		12B9ABA72B380B0200DF10DD /* shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
 		12D58BC52B36B51100C25C84 /* LearnGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D58BD02B36B57E00C25C84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		12D58BD22B36B59000C25C84 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
@@ -56,8 +59,11 @@
 		12D58BC72B36B51100C25C84 /* LearnGL */ = {
 			isa = PBXGroup;
 			children = (
+				124D91C42B38157B0011319E /* fragment.glsl */,
+				124D91C52B38157B0011319E /* vertex.glsl */,
 				12FA1CF12B36B99E00C21857 /* LearnGL.entitlements */,
 				128C09DB2B36C15E00A7045E /* main.cpp */,
+				12B9ABA72B380B0200DF10DD /* shader.h */,
 			);
 			path = LearnGL;
 			sourceTree = "<group>";
