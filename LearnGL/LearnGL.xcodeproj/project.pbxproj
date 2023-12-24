@@ -7,24 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12D58BC92B36B51100C25C84 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12D58BC82B36B51100C25C84 /* main.cpp */; };
+		126378982B36B80D0044D838 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 126378962B36B7EB0044D838 /* libglfw.3.3.dylib */; };
+		128C09DC2B36C15E00A7045E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 128C09DB2B36C15E00A7045E /* main.cpp */; };
+		12D58BD12B36B57E00C25C84 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D58BD02B36B57E00C25C84 /* OpenGL.framework */; };
+		12D58BD32B36B59000C25C84 /* libGLEW.2.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D58BD22B36B59000C25C84 /* libGLEW.2.2.0.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		12D58BC32B36B51100C25C84 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		126378962B36B7EB0044D838 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../../opt/homebrew/Cellar/glfw/3.3.9/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		128C09DB2B36C15E00A7045E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		12D58BC52B36B51100C25C84 /* LearnGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnGL; sourceTree = BUILT_PRODUCTS_DIR; };
-		12D58BC82B36B51100C25C84 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		12D58BD02B36B57E00C25C84 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		12D58BD22B36B59000C25C84 /* libGLEW.2.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.2.0.dylib; path = ../../../../../../../opt/homebrew/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib; sourceTree = "<group>"; };
+		12FA1CF12B36B99E00C21857 /* LearnGL.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnGL.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +27,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126378982B36B80D0044D838 /* libglfw.3.3.dylib in Frameworks */,
+				12D58BD32B36B59000C25C84 /* libGLEW.2.2.0.dylib in Frameworks */,
+				12D58BD12B36B57E00C25C84 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +41,7 @@
 			children = (
 				12D58BC72B36B51100C25C84 /* LearnGL */,
 				12D58BC62B36B51100C25C84 /* Products */,
+				12D58BCF2B36B57E00C25C84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +56,20 @@
 		12D58BC72B36B51100C25C84 /* LearnGL */ = {
 			isa = PBXGroup;
 			children = (
-				12D58BC82B36B51100C25C84 /* main.cpp */,
+				12FA1CF12B36B99E00C21857 /* LearnGL.entitlements */,
+				128C09DB2B36C15E00A7045E /* main.cpp */,
 			);
 			path = LearnGL;
+			sourceTree = "<group>";
+		};
+		12D58BCF2B36B57E00C25C84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				126378962B36B7EB0044D838 /* libglfw.3.3.dylib */,
+				12D58BD22B36B59000C25C84 /* libGLEW.2.2.0.dylib */,
+				12D58BD02B36B57E00C25C84 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,7 +81,6 @@
 			buildPhases = (
 				12D58BC12B36B51100C25C84 /* Sources */,
 				12D58BC22B36B51100C25C84 /* Frameworks */,
-				12D58BC32B36B51100C25C84 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -119,7 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D58BC92B36B51100C25C84 /* main.cpp in Sources */,
+				128C09DC2B36C15E00A7045E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,20 +253,46 @@
 		12D58BCD2B36B51100C25C84 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LearnGL/LearnGL.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78SMK7FBR2;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/glew/2.2.0_1/include,
+					/opt/homebrew/Cellar/glfw/3.3.9/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.3.9/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
 		12D58BCE2B36B51100C25C84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LearnGL/LearnGL.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 78SMK7FBR2;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/glew/2.2.0_1/include,
+					/opt/homebrew/Cellar/glfw/3.3.9/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/glew/2.2.0_1/lib,
+					/opt/homebrew/Cellar/glfw/3.3.9/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -271,7 +306,7 @@
 				12D58BCB2B36B51100C25C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		12D58BCC2B36B51100C25C84 /* Build configuration list for PBXNativeTarget "LearnGL" */ = {
 			isa = XCConfigurationList;
@@ -280,7 +315,7 @@
 				12D58BCE2B36B51100C25C84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
