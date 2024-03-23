@@ -20,10 +20,6 @@ glfwSetWindowShouldClose(window, true);
 }
 
 
-
-
-
-
 int main()
 {
     // Init GLFW
@@ -77,22 +73,23 @@ int main()
     };
     
     
-    //create and bind VAO to start config
+    //create and bind VAO to start config (VAO holds the element vertex information)
     GLuint VAO;
     glGenVertexArrays(1, &VAO);
     glBindVertexArray(VAO);
     
     
-    //create and bind VBO to set vertices
+    //create and bind VBO to set vertices coordinates
     GLuint VBO;
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     
     
-    //set vertex attributes
-    //notice stride is 6 * floatSize (6 steps). This is because there are 6 steps between each value
-    //3 position steps, then 3 color steps. Offset is 3 steps because it starts after the first 3 position steps.
+    //set vertex attributes, which are passed to shaders
+    //notice stride is 6 * float size (6 steps). This is because there are 6 steps between each value
+    //3 position steps, then 3 color steps. Stride = number of vertex attributes values per vertex
+    
     // position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float),
     (void*)0);
@@ -100,6 +97,8 @@ int main()
     
     
     // color attribute
+    //Offset is 3 steps because it starts after the first 3 position steps.
+
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float),
     (void*)(3* sizeof(float)));
     glEnableVertexAttribArray(1);
